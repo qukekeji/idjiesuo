@@ -1,112 +1,205 @@
 
 <!DOCTYPE html>
-<html>
+<html lang="zh-cn">
 <head>
-    <meta charset="UTF-8">
-    <title>首页</title>
-    <meta name="viewport"
-          content="width=device-width, initial-scale=1.0, user-scalable=no, minimum-scale=1.0, maximum-scale=1.0">
-    <link rel="stylesheet" type="text/css" href="icon_font/iconfont.css">
-    <link rel="stylesheet" href="css/swiper.min.css">
-    <link rel="stylesheet" href="css/weui.min.css">
-    <link rel="stylesheet" href="css/jquery-weui.min.css">
-    <link rel="stylesheet" href="css/phone.css">
-    <link rel="stylesheet" type="text/css" href="css/public.css">
-    
-    <link href="/ajax/libs/summernote/summernote.css?v=0.8.18" rel="stylesheet"/>
-
+    <meta charset="utf-8"/>
+    <title>AppleID Unlock</title>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+    <meta content="苹果ID账户24小时托管自动解锁 解锁 - 自助购卡" name="description"/>
+    <meta content="unlock,苹果ID,appleid,ios账号,AppleID自动解锁" name="keywords"/>
+    <link href="unlock/images/favicon.ico" rel="shortcut icon"/>
+    <link rel="stylesheet" href="unlock/css/animate.min.css" type="text/css"/>
+    <link rel="stylesheet" href="unlock/css/bootstrap.min.css" type="text/css"/>
+    <link rel="stylesheet" href="unlock/css/materialdesignicons.min.css" type="text/css"/>
+    <link rel="stylesheet" href="unlock/css/style.css" type="text/css"/>
+    <link rel="stylesheet" href="unlock/css/modal_window.css" type="text/css"/>
+    <link rel="stylesheet" href="unlock/DynamicText/css/reset.css">
+    <link rel="stylesheet" href="unlock/DynamicText/css/style.css">
 </head>
-<body>
-<div id="app">
-    <!--<h1 class="title1">账号共享</h1>-->
-    <div class="swiper-container swiper1 swiper-container-initialized swiper-container-horizontal">
-        <div class="swiper-wrapper" style="transition-duration: 0ms; transform: translate3d(-2250px, 0px, 0px);">
-            <div class="swiper-slide" style="width: 750px;" data-swiper-slide-index="1">
-                <a target="_blank" href="https://appsir.shop"><img src="/profile/upload/2022/05/31/banner.a7e55acdd63be416785b_20220531105618A001.jpeg"></a>
+
+
+<body style="background: url(unlock/images/overlay-3.png) bottom;">
+<div class="preloader">
+    <div class="status">
+        <div class="shape shape-1"></div>
+        <div class="shape shape-2"></div>
+        <div class="shape shape-3"></div>
+        <div class="shape shape-4"></div>
+    </div>
+</div>
+
+<div class="header">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-12">
+                <a href=""><img alt="" height="26" src="unlock/images/logo-dark.png"/></a>
+
+                <div class="float-right d-none d-md-inline-block">
+                    <a class="btn btn-primary btn-sm text-uppercase" target="_blank"
+                       href="https://appsir.shop/">Store</a>
+                </div>
             </div>
         </div>
-        <div class="swiper-pagination paging swiper-pagination-bullets">
-            <span class="swiper-pagination-bullet"></span>
-            <span class="swiper-pagination-bullet"></span>
-            <span class="swiper-pagination-bullet swiper-pagination-bullet-active"></span>
-        </div>
-        <span class="swiper-notification" aria-live="assertive" aria-atomic="true"></span>
     </div>
-    <div class="gg_box1"><span class="gg_title1">公告</span>
-        <iframe src="/share/ggText" frameBorder="0" style="width: 100%"  height="90"></iframe>
-    </div>
-    <!--<a class="btn1" href="#">广告：火箭账号购买租用</a>-->
-    <div class="weui-navbar">
-        <div class="weui-navbar__item" data-id="2">
-            工具类
-        </div>
-        <div class="weui-navbar__item" data-id="4">
-            免费应用号
-        </div>
-    </div>
-    <div>
-        <ul class="list" data-id="2">
-            <li class="item">
-                <div class="before">
-                    <img src="/profile/upload/2022/05/31/100x100bb_20220531144942A002.jpg" alt="" class="cover">
-                    <div class="title">小火箭</div>
-                </div>
-                <div class="after">
-                    <button class="action" data-appid="6" data-a="001">安装
-                    </button>
-                </div>
-            </li>
-        </ul>
-        <ul class="list" data-id="4">
-            <li class="item">
-                <div class="before">
-                    <img src="/profile/upload/2022/05/31/e98ff39f2d874afcdc0983e94a82571a_20220531145306A003.jpeg" alt="" class="cover">
-                    <div class="title">中国台湾</div>
-                </div>
-                <div class="after">
-                    <button class="action" data-appid="7" data-a="002">安装
-                    </button>
-                </div>
-            </li>
-            <li class="item">
-                <div class="before">
-                    <img src="/profile/upload/2022/05/31/e98ff39f2d874afcdc0983e94a82571a_20220531145657A004.jpeg" alt="" class="cover">
-                    <div class="title">美区</div>
-                </div>
-                <div class="after">
-                    <button class="action" data-appid="8" data-a="003">安装
-                    </button>
-                </div>
-            </li>
-            <li class="item">
-                <div class="before">
-                    <img src="/profile/upload/2022/05/31/878A7FA0-E5ED-4611-A025-5E6BAAD5D992_20220531173407A005.jpeg" alt="" class="cover">
-                    <div class="title">韩国</div>
-                </div>
-                <div class="after">
-                    <button class="action" data-appid="9" data-a="004">安装
-                    </button>
-                </div>
-            </li>
-        </ul>
-    </div>
-
-    <!--<a class="btn1 cor1" href="/unlockIndex">账号已锁定？点此解锁</a>
-    <div class="gg_box1">
-        <div class="gg_txt1">
-            <p>此网站由无马难追公众号运营</p>
-            <p>想要的软件没有被收录？公众号内联系我</p>
-        </div>
-    </div>-->
-    <div class="kb1"></div>
 </div>
+
+<div class="contain-box" id="Unlock">
+    <div class="home-center">
+        <div class="home-desc-center">
+            <div class="container">
+                <div class="row justify-content-center align-items-center">
+                    <div class="col-lg-8">
+                        <div class="mt-lg-0 mt-4 text-center">
+                            <h1 class="home-title display-4 font-weight-bold text-uppercase">AppleID Unlock</h1>
+                            <p class="text-muted f-18 mt-3 mb-1">下方输入你需要解锁的本站或托管的共享账号</p>
+                            <div class="mt-5">
+                                <div class="search-form">
+                                    <form action="#">
+                                        <input placeholder="输入账号" type="text" v-model="email"/>
+                                        <button @click="doUnlock" class="btn btn-primary" type="button">解锁</button>
+                                    </form>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="row mt-5 pt-3">
+                    <div class="col-lg-4">
+                        <div class="info-box mt-4">
+                            <div class="media">
+                                <i class="mdi mdi-earth h4 text-primary"></i>
+                                <div class="media-box ml-3">
+                                    <h5 class="f-18">提示帐号不存在</h5>
+                                    <p class="text-muted">1.非托管或本站共享账号<br>2.账号已删除（租用有效期24H）<br>3.输入错误</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-lg-4">
+                        <div class="info-box mt-4">
+                            <div class="media">
+                                <i class="mdi mdi-wallet h4 text-primary"></i>
+                                <div class="media-box ml-3">
+                                    <h5 class="f-18">提示无需解锁</h5>
+                                    <p class="text-muted">1.说明账号没有锁定，你登录输入错误<br>2.如果是更新App提示锁定，<a
+                                            href="https://appsir.shop/article/70" target="_blank">解决方法</a>
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-lg-4">
+                        <div class="info-box mt-4">
+                            <div class="media">
+                                <i class="mdi mdi-file-document h4 text-primary"></i>
+                                <div class="media-box ml-3">
+                                    <h5 class="f-18">本站商店</h5>
+                                    <p class="text-muted">自助购卡：<a href="https://appsir.shop/" target="_blank">https://appsir.shop</a>
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="footer">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-12">
+                <div class="footer-center pull-none">
+                    <p class="mb-0 mt-4">© 2022 appsir.shop. Design by 洋芋Sir | <a class="text-dark" href="#"
+                                                                                  onclick="fun_two_open();">购买本系统</a>
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!--点击弹窗one!-->
+<div id="one_click" style="display:none;">
+    <div style="background-color: rgb(234,234,234); opacity:0.8;filter:alpha(opacity=80); top: 0px; left: 0px; width: 100%; height: 800%; position: fixed; z-index: 1000; overflow: hidden; background-position: initial initial; background-repeat: initial initial; ">
+    </div>
+    <div class="modal-window">
+        <h4>正在解锁</h4>
+        <section class="">
+            <h1 class="cd-headline loading-bar">
+                <span>系统正在解锁，不要刷新和点击</span>
+            </h1>
+        </section>
+        <input class="btn btn-primary btn-sm text-uppercase" onclick="fun_one_close();" type="button"
+               value="关闭"/>
+    </div>
+</div>
+<!--点击弹窗two!-->
+<div id="two_click" style="display:none;">
+    <div style="background-color: rgb(234,234,234); opacity:0.8;filter:alpha(opacity=80); top: 0px; left: 0px; width: 100%; height: 800%; position: fixed; z-index: 1000; overflow: hidden; background-position: initial initial; background-repeat: initial initial; ">
+    </div>
+    <div class="modal-window">
+        <h4>联系我们</h4>
+        <p>如需购买本系统，请联系Telegram（<a href="https://t.me/app_sir1" target="_blank">@app_sir1</a>）、VX（app_sir）</p>
+        <input class="btn btn-primary btn-sm text-uppercase" onclick="fun_two_close();" type="button"
+               value="关闭"/>
+    </div>
+</div>
+
+<script src="unlock/js/jquery.min.js"></script>
+<script src="unlock/js/bootstrap.bundle.min.js"></script>
+<script src="unlock/js/jquery.easing.min.js"></script>
+
+<script src="unlock/DynamicText/js/jquery.min.js"></script>
+<script src="unlock/DynamicText/js/main.js"></script>
+<script src="unlock/js/axios.min.js"></script>
+<script src="unlock/js/vue.min.js"></script>
+<script src="unlock/js/sweetalert.min.js"></script>
+<script src="unlock/js/app.js"></script>
+
+<script type="text/javascript">
+    Vue.prototype.$axios = axios;
+    let AppVue = new Vue({
+        el: '#Unlock',
+        data: {
+            email: ''
+        },
+        methods: {
+            doUnlock: function () {
+                document.getElementById("one_click").style.display = '';
+                this.$axios({
+                    method: "GET",
+                    url: '/unlockIndex/' + this.email,
+                    async: true
+                }).then(function (res) {
+                    document.getElementById("one_click").style.display = 'none';
+                    if (res.data.code === 0) {
+                        swal("解锁成功!", res.data.msg, "success");
+                    } else {
+                        swal("解锁失败!", res.data.msg, "error");
+                    }
+                }).catch(function (err) {
+                    document.getElementById("one_click").style.display = 'none';
+                    swal("解锁失败!", "系统出错,请联系管理员!", "error");
+                });
+            }
+        }
+    });
+</script>
+
+<script type="text/javascript">
+    <!--点击弹窗two!-->
+    function fun_two_close() {
+        document.getElementById("two_click").style.display = 'none';
+    }
+
+    function fun_two_open() {
+        document.getElementById("two_click").style.display = '';
+    }
+</script>
 </body>
+
 </html>
-<script type="text/javascript" src="js/fastclick.js"></script>
-<script type="text/javascript" src="js/jquery-3.3.1.min.js"></script>
-<script type="text/javascript" src="js/jquery-weui.min.js"></script>
-<script src="js/swiper.min.js"></script>
-<script type="text/javascript" src="js/ajax.js"></script>
-<script type="text/javascript" src="js/api.js"></script>
-<script type="text/javascript" src="js/vue.min.js"></script>
-<script type="text/javascript" src="js/public.min.js"></script>
